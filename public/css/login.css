@@ -1,0 +1,32 @@
+:root{
+    --text-clr: #e0f7ec;
+    --background-clr: #040e09;
+    --primary-clr: #8de2b7;
+    --secondary-clr: #4e238b;
+    --accent-clr: #d350c9;
+}
+
+*{
+    padding: 0;
+    background: var(--secondary-clr);
+    color: var(--text-clr);
+}
+
+/* body{
+    margin-top: 5rem;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+h1{
+    font-size: 5rem;
+}
+
+a{
+    background: var(--secondary-clr);
+    font-size: 3rem;
+} */
