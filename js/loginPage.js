@@ -1,13 +1,13 @@
 //express
 const express = require('express')
-const app = express();
+// const app = express();
 const loginPage = express.Router();
 // Express session
 require('dotenv').config();
 const session = require('express-session');
 // body parser
 const bodyParser = require('body-parser');
-app.use(bodyParser.urlencoded({ extended: true }));
+loginPage.use(bodyParser.urlencoded({ extended: true }));
 //server mongoose
 const mongoose = require('mongoose');
 //password hatcher
@@ -31,20 +31,17 @@ const UsersModel = mongoose.model('Users', new mongoose.Schema({
 }));
 
 //session
-app.use(session({
+loginPage.use(session({
     secret: "temppassword",
     resave: true,
     saveUninitialized: true,
-    maxAge: 3600000
+    maxAge: 3600000,
 }));
 
 //Route
 loginPage.get("/loginPage", (req, res) => {
     res.render('loginPage');
 });
-
-// let emailExistError = false;
-// let passwordErrorMsg = "";
 
 // Log-in
 loginPage.post("/loginPage", async function(req, res){ 
@@ -54,6 +51,7 @@ loginPage.post("/loginPage", async function(req, res){
         if (usersEmail) { //check if password matches 
             const comparePass = await bcryptjs.compare(req.body.password, usersEmail.password);
             if (comparePass) {
+                console.log(req.session)
                 req.session.loggedin = true;
 				req.session.username = usersEmail;
                 res.redirect("homepage");
