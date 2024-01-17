@@ -31,7 +31,7 @@ const UsersModel = mongoose.model('Users', new mongoose.Schema({
 }));
 
 //session
-loginPage.use(session({
+const sessionMiddleware = loginPage.use(session({
     secret: "temppassword",
     resave: true,
     saveUninitialized: true,
@@ -54,7 +54,7 @@ loginPage.post("/loginPage", async function(req, res){
                 console.log(req.session)
                 req.session.loggedin = true;
 				req.session.username = usersEmail;
-                res.redirect("homepage");
+                res.redirect("newBlogPage");
             } else {
                 res.redirect("loginPage");
                 console.log("password doesn't match");
@@ -70,4 +70,4 @@ loginPage.post("/loginPage", async function(req, res){
 }); 
 
 
-module.exports = loginPage;
+module.exports = { loginPage, sessionMiddleware};
