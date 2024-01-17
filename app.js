@@ -15,9 +15,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Routes
 const homepageRouter = require("./js/homepage");
 const loginPageRouter = require("./js/loginpage");
+const logOutPageRouter = require("./js/logOutPage");
+const newBlogPageRouter = require("./js/newBlogPage");
 
 app.use("/", homepageRouter);
 app.use("/", loginPageRouter);
+app.use("/", logOutPageRouter);
+app.use("/", newBlogPageRouter);
 
 app.listen(port, () => {
     console.log(`Example app listening on port http://localhost:${port}/homepage`);
