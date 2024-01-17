@@ -13,6 +13,7 @@ const mongoose = require('mongoose');
 //password hatcher
 const bcryptjs = require('bcryptjs');
 
+
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/project-blog-api', {
     // useNewUrlParser: true,
@@ -31,12 +32,14 @@ const UsersModel = mongoose.model('Users', new mongoose.Schema({
 }));
 
 //session
-const sessionMiddleware = loginPage.use(session({
-    secret: "temppassword",
-    resave: true,
-    saveUninitialized: true,
-    maxAge: 3600000,
-}));
+const sessionMiddleware = require("./sessionMiddleware");
+loginPage.use(sessionMiddleware);
+// const sessionMiddleware = loginPage.use(session({
+//     secret: "temppassword",
+//     resave: true,
+//     saveUninitialized: true,
+//     maxAge: 3600000,
+// }));
 
 //Route
 loginPage.get("/loginPage", (req, res) => {
@@ -70,4 +73,4 @@ loginPage.post("/loginPage", async function(req, res){
 }); 
 
 
-module.exports = { loginPage, sessionMiddleware};
+module.exports = loginPage;
