@@ -1,0 +1,12 @@
+Blog
+
+Seperate page to add content to blog(needs a login to access)
+	-Add blog page needs inputs
+		Inputs
+		-Image
+		-Main body text
+Main Blog Page
+	Descending list of stuff(similar like tumblr)
+	Comments
+		-Need to be able to login and comment
+		-Displays username, date of post
