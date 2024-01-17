@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Routes
 const homepageRouter = require("./js/homepage");
-const loginPageRouter = require("./js/loginpage");
+const loginPageRouter = require("./js/loginPage");
 const logOutPageRouter = require("./js/logOutPage");
 const newBlogPageRouter = require("./js/newBlogPage");
 
