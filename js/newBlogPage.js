@@ -1,6 +1,5 @@
 //express
 const express = require('express')
-// const app = express();
 const newBlogPage = express.Router();
 // body parser
 const bodyParser = require('body-parser');
@@ -9,6 +8,7 @@ newBlogPage.use(bodyParser.urlencoded({ extended: true }));
 const mongoose = require('mongoose');
 //date fns
 const { format } = require('date-fns');
+
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/project-blog-api', {
 }, console.log("connected to database"));
