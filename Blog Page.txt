@@ -10,3 +10,5 @@ Main Blog Page
 	Comments
 		-Need to be able to login and comment
 		-Displays username, date of post
+
+Need to generate a new id for each blog page
