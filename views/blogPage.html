@@ -10,9 +10,9 @@
 <body>
     <h1>Blog page</h1>
     <div>
-        <h1><%= data[0].title%></h1>
-        <h2><%= data[0].date%></h2>
-        <li><%= data[0].body%></li>
+        <h1><%= data[blogId-1].title %></h1>
+        <h2><%= data[blogId-1].date %></h2>
+        <li><%= data[blogId-1].body %></li>
     </div>
 	<script src="blogPage.js"></script>
 </body>
