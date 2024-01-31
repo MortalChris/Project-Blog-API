@@ -13,8 +13,8 @@ blogPage.get("/blogPage/:id", async (req, res) => {
         //Using model it finds the data in mongodb
         const data = await BlogModel.find({}).exec();
         // data is an array of objects, not a single object!
-        res.render('blogPage', {
-            title: req.title,   
+        res.render('blogPage', { 
+            blogId: blogId,
             data: data
         });
     } catch (err) {
