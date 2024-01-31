@@ -17,11 +17,13 @@ const homepageRouter = require("./js/homepage");
 const loginPageRouter = require("./js/loginPage");
 const logOutPageRouter = require("./js/logOutPage");
 const newBlogPageRouter = require("./js/newBlogPage");
+const blogPageRouter = require("./js/blogPage");
 
 app.use("/", homepageRouter);
 app.use("/", loginPageRouter);
 app.use("/", logOutPageRouter);
 app.use("/", newBlogPageRouter);
+app.use("/", blogPageRouter);
 
 app.listen(port, () => {
     console.log(`Example app listening on port http://localhost:${port}/homepage`);
