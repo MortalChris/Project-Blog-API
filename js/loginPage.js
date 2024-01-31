@@ -34,12 +34,6 @@ const UsersModel = mongoose.model('Users', new mongoose.Schema({
 //session
 const sessionMiddleware = require("./sessionMiddleware");
 loginPage.use(sessionMiddleware);
-// const sessionMiddleware = loginPage.use(session({
-//     secret: "temppassword",
-//     resave: true,
-//     saveUninitialized: true,
-//     maxAge: 3600000,
-// }));
 
 //Route
 loginPage.get("/loginPage", (req, res) => {
