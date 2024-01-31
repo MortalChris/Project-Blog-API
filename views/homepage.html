@@ -10,9 +10,12 @@
     <body>
         <header>
             <p>Hello Front page</p>
+            <a href="/logInPage">Log In page</a>
         </header>
         <div id="blog-list">
-
+            <%  data.forEach(function(data, id){%>
+                <li><a href="/blogPage/<%= id + 1%>"><%= data.title%></a></li>
+            <% }) %>
         </div>
         
         <footer>Made by Christian A. Valeri</footer>
