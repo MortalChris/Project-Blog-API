@@ -1,3 +1,4 @@
+<base href="/">
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,13 +9,19 @@
     <link rel="stylesheet" href="css/blogpage.css">
 </head>
 <body>
-    <h1>Blog page</h1>
+    <header>
+        <a id="log-in"" href="/homepage">Mortal's Blog</a>
+    </header>
     <div>
         <!-- blogId is subtracting one becuase object indexes start at 0 and page indexes start at 1-->
-        <h1><%= data[blogId-1].title %></h1>
-        <h2><%= data[blogId-1].date %></h2>
-        <li><%= data[blogId-1].body %></li>
-    </div>
+        <% if(data[blogId-1]) { %>
+            <h1><%= data[blogId-1].title %></h1>
+            <h2><%= data[blogId-1].date %></h2>
+            <p><%= data[blogId-1].body %></p>
+        <% } else { %>
+            <p>No blog posted yet! Comeback later!</p>
+        <% } %>
+    </div>  
 	<script src="blogPage.js"></script>
 </body>
 </html>
