@@ -10,6 +10,7 @@
 <body>
     <h1>Blog page</h1>
     <div>
+        <!-- blogId is subtracting one becuase object indexes start at 0 and page indexes start at 1-->
         <h1><%= data[blogId-1].title %></h1>
         <h2><%= data[blogId-1].date %></h2>
         <li><%= data[blogId-1].body %></li>
