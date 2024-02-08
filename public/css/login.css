@@ -70,9 +70,11 @@ button{
     margin-top: 1rem;
     font-size: 1.5rem;
     border: none;
-
+    background: var(--accent-clr);
+    padding: 1rem;
+    border-radius: 1rem ;
 }
 
 button:hover {
-    color: var(--accent-clr);
+    background: var(--primary-clr)
 }
