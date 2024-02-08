@@ -37,7 +37,11 @@ loginPage.use(sessionMiddleware);
 
 //Route
 loginPage.get("/loginPage", (req, res) => {
-    res.render('loginPage');
+    if (req.session.loggedin) {
+        res.redirect('newBlogPage')
+    } else {
+        res.render('loginPage');  
+    }
 });
 
 // Log-in
