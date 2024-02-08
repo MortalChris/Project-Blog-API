@@ -36,8 +36,14 @@ newBlogPage.post("/newBlogPage", async (req, res, next) => {
         body: req.body.blogContent,
         date: format(new Date(), "yyyy-MM-dd HH:mm:ss")
     });
-    const result = await blogs.save();
-    res.status(202);
+    if (!req.body.blogTitle || !req.body.blogContent) {
+        res.redirect("newBlogPage");
+        console.log("Text wasn't entered!")
+    } else {
+        const result = await blogs.save();
+        res.status(202);
+    }
+
 });
 
 
