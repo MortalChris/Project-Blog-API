@@ -8,8 +8,67 @@
 }
 
 *{
-    padding: 0;
     background: var(--secondary-clr);
-    color: var(--text-clr);
+    text-decoration: none;
     font-family: 'Sixtyfour', sans-serif;
+}
+
+/* Header Content */
+header{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+
+    padding-top: 2rem;
+    position: fixed;
+    top: 0;
+    min-width: 98%;
+    margin: 1rem;
+
+	align-items: center;
+    font-size: 2rem;
+
+}
+/* Header Content/Blog Title */
+a{
+    color: var(--accent-clr);
+}
+a:hover{
+    color: var(--primary-clr)
+}
+
+/* Header Content */
+body{
+    color: var(--text-clr);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+    padding-bottom: 5rem;
+    margin: 10rem 40rem 0rem 40rem;
+}
+h1{
+    text-align: center;
+    font-size: 4rem;
+}
+label{
+    font-size: 2rem;
+}
+input{
+    margin: .5rem;
+    padding: 1.5rem;
+    border: none;
+    border: .1rem solid var(--text-clr);
+    font-size: 1.5rem;
+}
+
+button{
+    color: var(--text-clr);
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    border: none;
+    border: .1rem solid var(--text-clr);
 }
