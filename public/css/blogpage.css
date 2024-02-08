@@ -9,6 +9,7 @@
 
 *{
     padding: 0;
+    margin: 0;
     background: var(--secondary-clr);
     color: var(--text-clr);
     text-decoration: none;
@@ -40,15 +41,37 @@ a:hover{
 }
 
 /* Blog */
-h1{
-    font-size: 3rem;
-}
+
 div{
-    margin-top: 5rem;
+    margin-top: 10rem;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
 	justify-content: center;
 	align-items: center;
 	align-content: center;
+}
+h1{
+    font-size: 3rem;
+}
+p{
+    margin: 5rem 12rem 12rem 12rem;
+    font-size: 2.2rem;
+}
+p:first-letter{
+    color: var(--accent-clr);
+    font-size: 8rem;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    min-width: 96%;
+    padding: 1.2rem;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: center;
+	align-content: flex-end;
 }
