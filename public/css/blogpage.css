@@ -14,8 +14,36 @@
     text-decoration: none;
     font-family: 'Sixtyfour', sans-serif;
 }
+/* Header Content */
+header{
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-between;
 
-/* body{
+    padding-top: 2rem;
+    position: fixed;
+    top: 0;
+    min-width: 98%;
+    margin: 1rem;
+
+	align-items: center;
+    font-size: 2rem;
+
+}
+/* Header Content/Blog Title */
+a{
+    color: var(--accent-clr);
+}
+a:hover{
+    color: var(--primary-clr)
+}
+
+/* Blog */
+h1{
+    font-size: 3rem;
+}
+div{
     margin-top: 5rem;
 	display: flex;
 	flex-direction: column;
@@ -23,4 +51,4 @@
 	justify-content: center;
 	align-items: center;
 	align-content: center;
-} */
+}
