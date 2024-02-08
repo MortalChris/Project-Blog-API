@@ -9,15 +9,15 @@
 </head>
     <body>
         <header>
-            <p>Hello Front page</p>
-            <a href="/logInPage">Log In page</a>
+            <p>Mortal's Blog</p>
+            <a id="log-in"" href="/logInPage">Log In</a>
         </header>
         <div id="blog-list">
             <%  data.forEach(function(data, id){%>
-                <li><a href="/blogPage/<%= id + 1%>"><%= data.title%></a></li>
+                <li><a class="blog-links" href="/blogPage/<%= id + 1%>"><%= data.title%></a></li>
+                <!-- <span class="blog-links"> <%= data.date%></span> -->
             <% }) %>
         </div>
-        
         <footer>Made by Christian A. Valeri</footer>
         <script src="homepage.js"></script>
     </body>
