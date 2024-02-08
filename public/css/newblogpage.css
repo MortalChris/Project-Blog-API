@@ -70,5 +70,8 @@ button{
     margin-top: 1rem;
     font-size: 1.5rem;
     border: none;
-    border: .1rem solid var(--text-clr);
+
+}
+button:hover {
+    color: var(--accent-clr);
 }
