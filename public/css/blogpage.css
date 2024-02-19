@@ -55,6 +55,10 @@ h1{
     font-size: 3rem;
 }
 p{
+    /* --minFontSize: .5rem;
+    --maxFontSize: 5rem;
+    --scaler: 2rem;
+    font-size: clamp( var(--minFontSize), var(--scaler), var(--maxFontSize) ); */
     margin: 5rem 12rem 12rem 12rem;
     font-size: 2.2rem;
 }
@@ -75,3 +79,39 @@ footer{
 	align-items: center;
 	align-content: flex-end;
 }
+
+
+@media (max-width: 1024px) {
+    p{
+        margin: 3rem;
+        margin-bottom: 5rem;
+    }
+}
+/* ///////////// */
+@media (max-width: 768px) {
+    p{
+        margin: 2rem;
+        font-size: 1.5rem;
+    }
+}
+/* ///////////// */
+@media (max-width: 425px) {
+    header{
+        margin: 0rem;
+        font-size: 2rem;
+    }
+    p{
+        margin: 1rem;
+        font-size: .7rem;
+    }
+    p:first-letter{
+        font-size: 3rem;
+    }    
+    h1{
+        font-size: 1.2rem;
+    }
+    footer{
+        font-size: .9rem;
+    }
+}
+
