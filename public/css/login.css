@@ -48,7 +48,7 @@ body{
 	align-items: center;
 	align-content: center;
     padding-bottom: 5rem;
-    margin: 10rem 40rem 0rem 40rem;
+    margin: 10rem 0rem 0rem 0rem;
 }
 h1{
     text-align: center;
@@ -77,4 +77,21 @@ button{
 
 button:hover {
     background: var(--primary-clr)
+}
+
+@media (max-width: 425px) {
+    form h1{
+        font-size: 3rem;
+    }
+    form input{
+        font-size: 1rem;
+    }
+}
+@media (max-width: 320px) {
+    form h1{
+        font-size: 2.3rem;
+    }   
+    form input{
+        font-size: .6rem;
+    }
 }
